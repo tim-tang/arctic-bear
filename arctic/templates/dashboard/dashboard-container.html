@@ -1,0 +1,36 @@
+{% extends "layout/layout.html" %}
+
+{% block main %}
+
+<script type="text/template" id="vehicle-new">
+    <div class="modal-dialog colored-header custom-width">
+        <div class="md-content">
+            <div class="modal-header">
+                <h3>Create Vehicle</h3>
+                <button type="button" class="close md-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body form">
+                <div class="form-group">
+                    <label class="control-label">Vehicle Name</label>
+                    <input id="vehicle-name" type="email" class="form-control" placeholder="Vehilce Name" value="<%- vehicle_name %>">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Vehicle Price</label>
+                    <input id="vehicle-price" type="text" name="vehicle-price" value="<%- vehicle_price %>"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description</label>
+                    <textarea class="form-control"
+                        placeholder="This is the description" id="vehicle-desc" value="<%- vehicle_desc%>"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="vehicle-create-action" class="btn btn-primary btn-flat md-close" data-dismiss="modal" type="button">Create</button>
+                <button class="btn btn-default btn-flat md-close" data-dismiss="modal" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</script>
+{% endblock %}
+
+

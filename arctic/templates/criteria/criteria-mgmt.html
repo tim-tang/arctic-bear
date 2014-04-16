@@ -1,0 +1,11 @@
+{% from "macros/macro-mgmt-ops.html" import mgmt_ops %}
+
+<div class="col-md-12" xmlns="http://www.w3.org/1999/html">
+    <div class="content">
+
+        {{ mgmt_ops("criteria-new-modal", url_for('demo_handler.criteria_details'), url_for('demo_handler.criteria_details'), "#", "cri-mgmt-delete")}}
+
+        <div id="criteria-mgmt-datatable-div" class="table-responsive"></div>
+
+    </div>
+</div>

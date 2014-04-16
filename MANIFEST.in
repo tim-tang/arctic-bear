@@ -1,0 +1,6 @@
+recursive-include arctic/templates *.*
+recursive-include arctic/translations *.*
+recursive-include arctic/static *.*
+recursive-include etc *.*
+include Makefile
+include manager.py

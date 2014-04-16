@@ -1,0 +1,11 @@
+{% from "macros/macro-mgmt-ops.html" import mgmt_ops %}
+
+<div class="col-md-12">
+    <div class="content">
+
+        {{ mgmt_ops("role-new-modal", url_for('demo_handler.role_details'), url_for('demo_handler.role_details'), "#", "role-mgmt-delete")}}
+
+        <div class="table-responsive" id="role-mgmt-datatable-div"></div>
+
+    </div>
+</div>

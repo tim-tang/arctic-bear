@@ -1,0 +1,11 @@
+{% from "macros/macro-mgmt-ops.html" import mgmt_ops %}
+
+<div class="col-md-12">
+    <div class="content">
+
+        {{ mgmt_ops("privilege-new-modal", url_for('demo_handler.privilege_details'), url_for('demo_handler.privilege_details'), "#", "priv-mgmt-delete")}}
+
+        <div id="privilege-mgmt-datatable-div" class="table-responsive"></div>
+
+    </div>
+</div>

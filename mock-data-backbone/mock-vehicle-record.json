@@ -1,0 +1,46 @@
+[
+  {
+    "sTitle": "ID",
+    "mData": "id",
+    "sType": "numeric",
+    "sCriteriable": "Yes",
+    "values": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "sTitle": "Vehicle Name",
+    "mData": "vehicle_name",
+    "sCriteriable": "Yes",
+    "values": [
+      "Trident",
+      "Audi",
+      "Gecko"
+    ]
+  },
+  {
+    "sTitle": "Vehicle Price",
+    "mData": "vehicle_price",
+    "sType": "numeric",
+    "sCriteriable": "Yes",
+    "values": [
+      1000,
+      2000,
+      3000
+    ]
+  },
+  {
+    "sTitle": "Description",
+    "mData": "vehicle_desc",
+    "sClass": "center",
+    "sCriteriable": "Yes",
+    "values": [
+      "Internet Explorer 4.0",
+      "FireFox",
+      "Chrome"
+    ]
+  }
+]
+
