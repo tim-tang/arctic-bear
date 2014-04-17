@@ -346,6 +346,11 @@ def fetch_criteria_history():
     mock_criteria_hisroty = retrieve_mock_data('mock-criteria-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_criteria_hisroty);
 
+@bp.route('/filter-settings', methods=['GET'])
+@crossdomain(origin='*', headers='Content-Type')
+def fetch_filter_settings():
+    mock_filter_settings = retrieve_mock_data('mock-filter-settings.json', 'mock-data-backbone')
+    return json.dumps(mock_filter_settings);
 
 
 ### Method for Mock data

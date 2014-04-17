@@ -1,0 +1,27 @@
+{
+    "filter-settings":[
+    {
+        "component": "DateRangePicker",
+            "default": "",
+            "attr": "update_at",
+    }, 
+
+    {
+        "component": "Select2",
+        "default": [{"value": "audi", "label": "Audi"}, {"value": "benz", "label":"Benz"}, {"value": "toyota": "label":"Toyota"}, {"value":"bently", "label":"Bently"}],
+        "attr": "brand",
+    },
+
+    {
+        "component": "Select2Tag", 
+        "default": "Audi, Bently",
+        "attr": "name"
+    },
+
+    {
+        "component": "Slider",
+        "default": [0, 100000],
+        "attr": "price"
+    }
+    ]
+}
