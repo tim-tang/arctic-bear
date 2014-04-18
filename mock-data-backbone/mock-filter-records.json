@@ -1,5 +1,5 @@
 {
-    "filter-records":[
+    "filter_records":[
         {
             "name": "Audi",
             "image": "assets/images/placeholder50x50.gif",
@@ -19,5 +19,4 @@
             "desc": "This is the car description."
         }
     ]
-
 }
