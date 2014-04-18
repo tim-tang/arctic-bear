@@ -298,20 +298,25 @@ def destory_criteria(id):
 @crossdomain(origin='*', headers='Content-Type')
 def update_criteria(id):
     print 'In PUT METHOD..'
-    return jsonify(id=id);
+    return jsonify(id=id)
 
 @bp.route('/criteria-history', methods=['GET'])
 @crossdomain(origin='*', headers='Content-Type')
 def fetch_criteria_history():
     mock_criteria_hisroty = retrieve_mock_data('mock-criteria-history-record.json', 'mock-data-backbone')
-    return json.dumps(mock_criteria_hisroty);
+    return json.dumps(mock_criteria_hisroty)
 
 @bp.route('/generic-filter', methods=['GET'])
 @crossdomain(origin='*', headers='Content-Type')
 def fetch_generic_filter():
     mock_filter_settings = retrieve_mock_data('mock-filter-settings.json', 'mock-data-backbone')
-    return json.dumps(mock_filter_settings);
+    return json.dumps(mock_filter_settings)
 
+@bp.route('/filter-generic-records', methods=['GET'])
+@crossdomain(origin='*', headers='Content-Type')
+def filter_generic_records():
+    mock_filter_records = retrieve_mock_data('mock-filter-records.json', 'mock-data-backbone')
+    return json.dumps(mock_filter_records)
 
 ### Method for Mock data
 

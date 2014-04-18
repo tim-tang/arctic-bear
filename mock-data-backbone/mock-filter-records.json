@@ -1,0 +1,23 @@
+{
+    "filter-records":[
+        {
+            "name": "Audi",
+            "image": "assets/images/placeholder50x50.gif",
+            "price": "¥25000",
+            "desc": "This is the car description."
+        },
+        {
+            "name": "Benz",
+            "image": "assets/images/placeholder50x50.gif",
+            "price": "¥25",
+            "desc": "This is the car description."
+        },
+        {
+            "name": "Bently",
+            "image": "assets/images/placeholder50x50.gif",
+            "price": "¥880000",
+            "desc": "This is the car description."
+        }
+    ]
+
+}
