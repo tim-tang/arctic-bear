@@ -44,8 +44,8 @@
       "component": "SLIDER_RANGE",
       "selector": "#price-range",
       "options": {
-        "min": 1,
-        "max": 1000000
+        "min_selector": "#min",
+        "max_selector": "#max"
       }
     }
   ]
