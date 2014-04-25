@@ -4,28 +4,28 @@
       "id": "1",
       "cri_name": "All Users",
       "cri_desc": "This is All Users",
-      "cri_type": "User",
+      "obj_type": "User",
       "enabled": "Yes"
     },
     {
       "id": "2",
       "cri_name": "All Vehicle",
       "cri_desc": "This is All Vehicle",
-      "cri_type": "Vehicle",
+      "obj_type": "Vehicle",
       "enabled": "Yes"
     },
     {
       "id": "3",
       "cri_name": "All Sales",
       "cri_desc": "This is All Sales",
-      "cri_type": "User",
+      "obj_type": "User",
       "enabled": "Yes"
     },
     {
       "id": "4",
       "cri_name": "All Cars",
       "cri_desc": "This is All Cars",
-      "cri_type": "Car",
+      "obj_type": "Car",
       "enabled": "No"
     }
   ],
@@ -43,8 +43,8 @@
       "mData": "cri_desc"
     },
     {
-      "sTitle": "Privilege Type",
-      "mData": "cri_type"
+      "sTitle": "Object Type",
+      "mData": "obj_type"
     },
     {
       "sTitle": "Enabled",
