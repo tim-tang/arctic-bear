@@ -306,15 +306,17 @@ def fetch_criteria_history():
     mock_criteria_hisroty = retrieve_mock_data('mock-criteria-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_criteria_hisroty)
 
+### Generic Filter Mock Data
 @bp.route('/generic-filter', methods=['GET'])
 @crossdomain(origin='*', headers='Content-Type')
 def fetch_generic_filter():
     mock_filter_settings = retrieve_mock_data('mock-filter-settings.json', 'mock-data-backbone')
     return json.dumps(mock_filter_settings)
 
-@bp.route('/filter-generic-records', methods=['GET'])
+@bp.route('/generic-records/filter', methods=['GET'])
 @crossdomain(origin='*', headers='Content-Type')
 def filter_generic_records():
+    print 'Generic Filter Params >> '+request.args.get('q');
     mock_filter_records = retrieve_mock_data('mock-filter-records.json', 'mock-data-backbone')
     return json.dumps(mock_filter_records)
 
