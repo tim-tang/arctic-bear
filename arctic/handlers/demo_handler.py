@@ -129,143 +129,149 @@ def criteria_history_data():
 @bp.route('/security/authenticate', methods=['POST', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type')
 def authenticate():
-    return jsonify(security_user={auth_token: 'mocked-hmac-authorization-token'})
+    print 'Auth User name :>>' + request.form.get('username')
+    return jsonify(security_user={'auth_token': 'mocked-hmac-authorization-token'})
+
+@bp.route('/security/signout', methods=['DELETE', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def signout():
+    return jsonify(result='success')
 
 ### Vehicle Mock Data
-@bp.route('/vehicles', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/vehicles', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_vehicles():
     mock_vehicles = retrieve_mock_data('mock-vehicle-record.json', 'mock-data-backbone')
     return json.dumps(mock_vehicles);
 
 @bp.route('/vehicles', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_vehicle():
     return jsonify(id=random.randint(8, 1000))
 
 @bp.route('/vehicles/<int:id>', methods=['DELETE', 'OPTIONS'])
-@crossdomain(origin='*')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def destory_vehicle(id):
     print 'In DELETE METHOD..'
     return jsonify(id=id)
 
 @bp.route('/vehicles/<int:id>', methods=['PUT', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def update_vehicle(id):
     print 'In PUT METHOD..'
     return jsonify(id=id)
 
-@bp.route('/vehicle-criteriable-attrs', methods=['GET'])
-@crossdomain(origin='*')
+@bp.route('/vehicle-criteriable-attrs', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_vehicle_criteriable_attrs():
     mock_vehicle_criteriable_attrs = retrieve_mock_data('mock-vehicle-header.json', 'mock-data-backbone')
     print mock_vehicle_criteriable_attrs
     return json.dumps(mock_vehicle_criteriable_attrs)
 
 ### User Mock Data
-@bp.route('/users', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/users', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_users():
     mock_users = retrieve_mock_data('mock-user-record.json', 'mock-data-backbone')
     return json.dumps(mock_users);
 
 @bp.route('/users', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_user():
     return jsonify(id=random.randint(8, 1000));
 
 @bp.route('/users/<int:id>', methods=['DELETE', 'OPTIONS'])
-@crossdomain(origin='*')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def destory_user(id):
     print 'In DELETE METHOD..'
     return jsonify(id=id);
 
 @bp.route('/users/<int:id>', methods=['PUT', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def update_user(id):
     print 'In PUT METHOD..'
     return jsonify(id=id);
 
-@bp.route('/user-attrs', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/user-attrs', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_user_atts():
     mock_user_group_attrs = retrieve_mock_data('mock-user-attrs.json', 'mock-data-backbone')
     return json.dumps(mock_user_attrs);
 
 ### User Group Mock Data
-@bp.route('/user-groups', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/user-groups', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_user_groups():
     mock_user_groups = retrieve_mock_data('mock-user-group-record.json', 'mock-data-backbone')
     return json.dumps(mock_user_groups);
 
 @bp.route('/user-groups', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_user_group():
     return jsonify(id=random.randint(8, 1000));
 
 @bp.route('/user-groups/<int:id>', methods=['DELETE', 'OPTIONS'])
-@crossdomain(origin='*')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def destory_user_group(id):
     print 'In DELETE METHOD..'
     return jsonify(id=id);
 
 @bp.route('/user-groups/<int:id>', methods=['PUT', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def update_user_group(id):
     print 'In PUT METHOD..'
     return jsonify(id=id);
 
-@bp.route('/user-group-attrs', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/user-group-attrs', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_user_group_atts():
     mock_user_group_attrs = retrieve_mock_data('mock-user-group-attrs.json', 'mock-data-backbone')
     return json.dumps(mock_user_group_attrs);
 
 ### Role Mock Data
-@bp.route('/roles', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/roles', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_roles():
     mock_roles = retrieve_mock_data('mock-role-record.json', 'mock-data-backbone')
     return json.dumps(mock_roles);
 
 @bp.route('/roles', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_role():
     return jsonify(id=random.randint(8, 1000));
 
 @bp.route('/roles/<int:id>', methods=['DELETE', 'OPTIONS'])
-@crossdomain(origin='*')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def destory_role(id):
     print 'In DELETE METHOD..'
     return jsonify(id=id);
 
 @bp.route('/roles/<int:id>', methods=['PUT', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def update_role(id):
     print 'In PUT METHOD..'
     return jsonify(id=id);
 
-@bp.route('/role-history', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/role-history', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_role_history():
     mock_role_hisroty = retrieve_mock_data('mock-role-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_role_hisroty);
 
 ### Privilege Mock Data
-@bp.route('/privileges', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/privileges', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_priveilges():
     mock_privileges= retrieve_mock_data('mock-privilege-record.json', 'mock-data-backbone')
     return json.dumps(mock_privileges);
 
 @bp.route('/privileges', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_privilege():
     return jsonify(id=random.randint(8, 1000));
 
 @bp.route('/privileges/<int:id>', methods=['DELETE', 'OPTIONS'])
-@crossdomain(origin='*')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def destory_privilege(id):
     print 'In DELETE METHOD..'
     return jsonify(id=id);
@@ -276,52 +282,54 @@ def update_privilege(id):
     print 'In PUT METHOD..'
     return jsonify(id=id);
 
-@bp.route('/privilege-history', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/privilege-history', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_privilege_history():
     mock_privilege_hisroty = retrieve_mock_data('mock-privilege-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_privilege_hisroty);
 
 ### Criteria Mock Data
-@bp.route('/criterias', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/criterias', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_criterias():
     fetch_criterias = retrieve_mock_data('mock-criteria-record.json', 'mock-data-backbone')
     return json.dumps(fetch_criterias);
 
 @bp.route('/criterias', methods=['POST', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_criteria():
     return jsonify(id=random.randint(8, 1000));
 
 @bp.route('/criterias/<int:id>', methods=['DELETE', 'OPTIONS'])
-@crossdomain(origin='*')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def destory_criteria(id):
     print 'In DELETE METHOD..'
     return jsonify(id=id);
 
 @bp.route('/criterias/<int:id>', methods=['PUT', 'OPTIONS'])
-@crossdomain(origin='*', headers='Content-Type')
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def update_criteria(id):
     print 'In PUT METHOD..'
     return jsonify(id=id)
 
-@bp.route('/criteria-history', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/criteria-history', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_criteria_history():
     mock_criteria_hisroty = retrieve_mock_data('mock-criteria-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_criteria_hisroty)
 
 ### Generic Filter Mock Data
-@bp.route('/generic-filter', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/generic-filter', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_generic_filter():
+    print  request.headers.get('Authorization')
     mock_filter_settings = retrieve_mock_data('mock-filter-settings.json', 'mock-data-backbone')
     return json.dumps(mock_filter_settings)
 
-@bp.route('/generic-records/filter', methods=['GET'])
-@crossdomain(origin='*', headers='Content-Type')
+@bp.route('/generic-records/filter', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
 def filter_generic_records():
+    print  request.headers.get('Authorization')
     print 'Generic Filter Params >> '+request.args.get('q');
     mock_filter_records = retrieve_mock_data('mock-filter-records.json', 'mock-data-backbone')
     return json.dumps(mock_filter_records)
