@@ -125,6 +125,12 @@ def criteria_history_data():
 #
 ###############################################################
 
+### Security Mock 
+@bp.route('/security/authenticate', methods=['POST', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type')
+def authenticate():
+    return jsonify(security_user={auth_token: 'mocked-hmac-authorization-token'})
+
 ### Vehicle Mock Data
 @bp.route('/vehicles', methods=['GET'])
 @crossdomain(origin='*', headers='Content-Type')
