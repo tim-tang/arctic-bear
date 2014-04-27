@@ -1,41 +1,45 @@
-{
-  "filter_records": [
+  [
     {
+      "id": 1,
       "name": "Audi",
       "image": "assets/images/placeholder50x50.gif",
       "price": "¥25000",
       "desc": "This is the car description."
     },
     {
+      "id": 2,
       "name": "Benz",
       "image": "assets/images/placeholder50x50.gif",
       "price": "¥25",
       "desc": "This is the car description."
     },
     {
+      "id": 3,
       "name": "Bently",
       "image": "assets/images/placeholder50x50.gif",
       "price": "¥880000",
       "desc": "This is the car description."
     },
     {
+      "id": 4,
       "name": "Audi",
       "image": "assets/images/placeholder50x50.gif",
       "price": "¥25000",
       "desc": "This is the car description."
     },
     {
+      "id": 5,
       "name": "Benz",
       "image": "assets/images/placeholder50x50.gif",
       "price": "¥25",
       "desc": "This is the car description."
     },
     {
+      "id": 6,
       "name": "Bently",
       "image": "assets/images/placeholder50x50.gif",
       "price": "¥880000",
       "desc": "This is the car description."
     }
-  ]
-}
+]
 
