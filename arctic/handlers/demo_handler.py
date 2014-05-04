@@ -235,6 +235,12 @@ def fetch_roles():
     mock_roles = retrieve_mock_data('mock-role-record.json', 'mock-data-backbone')
     return json.dumps(mock_roles);
 
+@bp.route('/roles/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_role_details(id):
+    mock_role_details = retrieve_mock_data('mock-role-details.json', 'mock-data-backbone')
+    return json.dumps(mock_role_details);
+
 @bp.route('/roles', methods=['POST', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def create_role():
