@@ -1,0 +1,38 @@
+{
+	"id": "1",
+	"users": {
+		"aaData": [
+			{
+				"id": "2",
+				"u_name": "Tim",
+				"u_desc": "Description of Tim",
+				"u_email": "tim.tang@arctic.com",
+				"enabled": "Yes"
+			}, {
+				"id": "3",
+				"u_name": "Johnny",
+				"u_desc": "Description of Johnny",
+				"u_email": "johnny.lv@arctic.com",
+				"enabled": "Yes"
+			}
+		],
+		"aoColumns": [
+			{
+				"sTitle": "ID",
+				"mData": "id"
+			}, {
+				"sTitle": "Name",
+				"mData": "u_name"
+			}, {
+				"sTitle": "Description",
+				"mData": "u_desc"
+			}, {
+				"sTitle": "Email",
+				"mData": "u_email"
+			}, {
+				"sTitle": "Enabled",
+				"mData": "enabled"
+			}
+		]
+	}
+}

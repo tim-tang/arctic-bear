@@ -1,0 +1,38 @@
+{
+	"id": "1",
+	"user_groups": {
+		"aaData": [
+			{
+				"id": "1",
+				"ug_name": "Administrators",
+				"ug_desc": "Description of Administrators",
+				"users": "Admin, Tim, Johnny",
+				"enabled": "Yes"
+			}, {
+				"id": "2",
+				"ug_name": "User Group 01",
+				"ug_desc": "Description of User Group 01",
+				"users": "User01, User02",
+				"enabled": "No"
+			}
+		],
+		"aoColumns": [
+			{
+				"sTitle": "ID",
+				"mData": "id"
+			}, {
+				"sTitle": "Name",
+				"mData": "ug_name"
+			}, {
+				"sTitle": "Description",
+				"mData": "ug_desc"
+			}, {
+				"sTitle": "Users",
+				"mData": "users"
+			}, {
+				"sTitle": "Enabled",
+				"mData": "enabled"
+			}
+		]
+	}
+}

@@ -265,6 +265,24 @@ def fetch_role_history():
     mock_role_hisroty = retrieve_mock_data('mock-role-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_role_hisroty);
 
+@bp.route('/role-privileges/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_role_privileges(id):
+    mock_role_privileges = retrieve_mock_data('mock-role-privileges.json', 'mock-data-backbone')
+    return json.dumps(mock_role_privileges);
+
+@bp.route('/role-user-groups/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_role_user_groups(id):
+    mock_role_user_groups = retrieve_mock_data('mock-role-user-groups.json', 'mock-data-backbone')
+    return json.dumps(mock_role_user_groups);
+
+@bp.route('/role-users/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_role_users(id):
+    mock_role_users = retrieve_mock_data('mock-role-users.json', 'mock-data-backbone')
+    return json.dumps(mock_role_users);
+
 ### Privilege Mock Data
 @bp.route('/privileges', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
