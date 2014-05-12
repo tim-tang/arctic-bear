@@ -3,25 +3,25 @@
 	"privileges": {
 		"aaData": [
 			{
-				"id": "1",
+				"id": "3",
 				"priv_name": "Create User",
 				"priv_desc": "This is Create User",
 				"priv_type": "Create",
 				"enabled": "Yes"
 			}, {
-				"id": "2",
+				"id": "1",
 				"priv_name": "Read User",
 				"priv_desc": "This is Read User",
 				"priv_type": "Read",
 				"enabled": "Yes"
 			}, {
-				"id": "3",
+				"id": "5",
 				"priv_name": "Modify User",
 				"priv_desc": "This is Modify User",
 				"priv_type": "Modify",
 				"enabled": "No"
 			}, {
-				"id": "4",
+				"id": "7",
 				"priv_name": "Delete User",
 				"priv_desc": "This is Delete User",
 				"priv_type": "Delete",
