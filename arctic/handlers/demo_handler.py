@@ -259,9 +259,15 @@ def update_role(id):
     print 'In PUT METHOD..'
     return jsonify(id=id);
 
-@bp.route('/role-history', methods=['GET', 'OPTIONS'])
+@bp.route('/role-general-info/<int:id>', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
-def fetch_role_history():
+def fetch_role_general_info(id):
+    mock_role_general_info = retrieve_mock_data('mock-role-details.json', 'mock-data-backbone')
+    return json.dumps(mock_role_general_info);
+
+@bp.route('/role-history/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_role_history(id):
     mock_role_hisroty = retrieve_mock_data('mock-role-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_role_hisroty);
 
