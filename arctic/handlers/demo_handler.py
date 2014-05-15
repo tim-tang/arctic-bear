@@ -125,7 +125,7 @@ def criteria_history_data():
 #
 ###############################################################
 
-### Security Mock 
+##################### Security Mock Start #####################
 @bp.route('/security/authenticate', methods=['POST', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type')
 def authenticate():
@@ -136,8 +136,9 @@ def authenticate():
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def signout():
     return jsonify(result='success')
+##################### Security Mock End #######################
 
-### Vehicle Mock Data
+##################### Vehicle Mock Data #######################
 @bp.route('/vehicles', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_vehicles():
@@ -167,8 +168,9 @@ def fetch_vehicle_criteriable_attrs():
     mock_vehicle_criteriable_attrs = retrieve_mock_data('mock-vehicle-header.json', 'mock-data-backbone')
     print mock_vehicle_criteriable_attrs
     return json.dumps(mock_vehicle_criteriable_attrs)
+##################### Vehicle Mock Data #######################
 
-### User Mock Data
+####################### User Mock Data ########################
 @bp.route('/users', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_users():
@@ -197,8 +199,9 @@ def update_user(id):
 def fetch_user_atts():
     mock_user_group_attrs = retrieve_mock_data('mock-user-attrs.json', 'mock-data-backbone')
     return json.dumps(mock_user_attrs);
+####################### User Mock Data ########################
 
-### User Group Mock Data
+################### User Group Mock Data ######################
 @bp.route('/user-groups', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_user_groups():
@@ -227,8 +230,9 @@ def update_user_group(id):
 def fetch_user_group_atts():
     mock_user_group_attrs = retrieve_mock_data('mock-user-group-attrs.json', 'mock-data-backbone')
     return json.dumps(mock_user_group_attrs);
+################### User Group Mock Data ######################
 
-### Role Mock Data
+####################### Role Mock Data ########################
 @bp.route('/roles', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_roles():
@@ -288,8 +292,9 @@ def fetch_role_user_groups(id):
 def fetch_role_users(id):
     mock_role_users = retrieve_mock_data('mock-role-users.json', 'mock-data-backbone')
     return json.dumps(mock_role_users);
+####################### Role Mock Data ########################
 
-### Privilege Mock Data
+##################### Privilege Mock Data #####################
 @bp.route('/privileges', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_priveilges():
@@ -318,8 +323,9 @@ def update_privilege(id):
 def fetch_privilege_history():
     mock_privilege_hisroty = retrieve_mock_data('mock-privilege-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_privilege_hisroty);
+##################### Privilege Mock Data #####################
 
-### Criteria Mock Data
+##################### Criteria Mock Data ######################
 @bp.route('/criterias', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_criterias():
@@ -348,8 +354,9 @@ def update_criteria(id):
 def fetch_criteria_history():
     mock_criteria_hisroty = retrieve_mock_data('mock-criteria-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_criteria_hisroty)
+##################### Criteria Mock Data ######################
 
-### Generic Filter Mock Data
+################# Generic Filter  Mock Data ###################
 @bp.route('/generic-filter', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
 def fetch_generic_filter():
@@ -364,9 +371,10 @@ def filter_generic_records():
     print 'Generic Filter Params >> '+request.args.get('q');
     mock_filter_records = retrieve_mock_data('mock-filter-records.json', 'mock-data-backbone')
     return json.dumps(mock_filter_records)
+################# Generic Filter  Mock Data ###################
 
-### Method for Mock data
 
+#################### Method for Mock data #####################
 def is_ajax(request):
     return "X-Requested-With" in request.headers and request.headers['X-Requested-With'] == "XMLHttpRequest"
 
