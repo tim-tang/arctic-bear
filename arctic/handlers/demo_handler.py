@@ -199,6 +199,25 @@ def update_user(id):
 def fetch_user_atts():
     mock_user_group_attrs = retrieve_mock_data('mock-user-attrs.json', 'mock-data-backbone')
     return json.dumps(mock_user_attrs);
+
+@bp.route('/user-general-info/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_user_general_info(id):
+    mock_user_general_info = retrieve_mock_data('mock-user-details.json', 'mock-data-backbone')
+    return json.dumps(mock_user_general_info);
+
+@bp.route('/user-user-groups/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_user_user_groups(id):
+    mock_user_user_groups = retrieve_mock_data('mock-user-user-groups.json', 'mock-data-backbone')
+    return json.dumps(mock_user_user_groups);
+
+@bp.route('/user-history/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_user_history(id):
+    mock_user_hisroty = retrieve_mock_data('mock-user-history-record.json', 'mock-data-backbone')
+    return json.dumps(mock_user_hisroty);
+
 ####################### User Mock Data ########################
 
 ################### User Group Mock Data ######################

@@ -1,0 +1,38 @@
+{
+	"id": "1",
+	"history": {
+		"aaData": [
+			{
+				"action": "Create Uer",
+				"user_name": "Administrator",
+				"date_time": "2014-03-20 12:00:30",
+				"details": "Administrator do something"
+			}, {
+				"action": "Read User",
+				"user_name": "Administrator",
+				"date_time": "2014-03-20 12:00:30",
+				"details": "Administrator do something"
+			}, {
+				"action": "Delete User",
+				"user_name": "Administrator",
+				"date_time": "2014-03-20 12:00:30",
+				"details": "Administrator do something"
+			}
+		],
+		"aoColumns": [
+			{
+				"sTitle": "Action",
+				"mData": "action"
+			}, {
+				"sTitle": "User Name",
+				"mData": "user_name"
+			}, {
+				"sTitle": "Date Time",
+				"mData": "date_time"
+			}, {
+				"sTitle": "Details",
+				"mData": "details"
+			}
+		]
+	}
+}
