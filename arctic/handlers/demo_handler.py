@@ -217,7 +217,6 @@ def fetch_user_user_groups(id):
 def fetch_user_history(id):
     mock_user_hisroty = retrieve_mock_data('mock-user-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_user_hisroty);
-
 ####################### User Mock Data ########################
 
 ################### User Group Mock Data ######################
@@ -249,6 +248,24 @@ def update_user_group(id):
 def fetch_user_group_atts():
     mock_user_group_attrs = retrieve_mock_data('mock-user-group-attrs.json', 'mock-data-backbone')
     return json.dumps(mock_user_group_attrs);
+
+@bp.route('/user-group-general-info/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_user_group_general_info(id):
+    mock_user_group_general_info = retrieve_mock_data('mock-user-group-details.json', 'mock-data-backbone')
+    return json.dumps(mock_user_group_general_info);
+
+@bp.route('/user-group-users/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_user_group_users(id):
+    mock_user_user_groups = retrieve_mock_data('mock-user-group-users.json', 'mock-data-backbone')
+    return json.dumps(mock_user_user_groups);
+
+@bp.route('/user-group-history/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_user_group_history(id):
+    mock_user_group_hisroty = retrieve_mock_data('mock-user-group-history-record.json', 'mock-data-backbone')
+    return json.dumps(mock_user_group_hisroty);
 ################### User Group Mock Data ######################
 
 ####################### Role Mock Data ########################
