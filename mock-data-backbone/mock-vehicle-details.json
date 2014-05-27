@@ -1,0 +1,11 @@
+{
+	"id": "1",
+	"vehicle_name": "Vehicle 01",
+	"vehicle_desc": "Description of Vehicle 01",
+	"vehicle_brand": "S200",
+	"vehicle_price": 200000,
+	"vehicle_model": "S200",
+	"vehicle_emission": "#93-1",
+	"status": "Yes"
+}
+

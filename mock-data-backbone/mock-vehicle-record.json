@@ -1,46 +1,68 @@
-[
-  {
-    "sTitle": "ID",
-    "mData": "id",
-    "sType": "numeric",
-    "sCriteriable": "Yes",
-    "values": [
-      1,
-      2,
-      3
-    ]
-  },
-  {
-    "sTitle": "Vehicle Name",
-    "mData": "vehicle_name",
-    "sCriteriable": "Yes",
-    "values": [
-      "Trident",
-      "Audi",
-      "Gecko"
-    ]
-  },
-  {
-    "sTitle": "Vehicle Price",
-    "mData": "vehicle_price",
-    "sType": "numeric",
-    "sCriteriable": "Yes",
-    "values": [
-      1000,
-      2000,
-      3000
-    ]
-  },
-  {
-    "sTitle": "Description",
-    "mData": "vehicle_desc",
-    "sClass": "center",
-    "sCriteriable": "Yes",
-    "values": [
-      "Internet Explorer 4.0",
-      "FireFox",
-      "Chrome"
-    ]
-  }
-]
-
+{
+    "aaData": [
+	    {
+			"id": "1",
+	      	"vehicle_name": "Vehicle 01",
+	      	"vehicle_desc": "Description of Vehicle 01",
+	      	"vehicle_brand": "S200",
+	      	"vehicle_price": 200000,
+	      	"vehicle_model": "S200",
+	      	"vehicle_emission": "#93-1",
+	      	"status": "Yes"
+	    },
+	    {
+			"id": "2",
+	      	"vehicle_name": "Vehicle 02",
+	      	"vehicle_desc": "Description of Vehicle 02",
+	      	"vehicle_brand": "S500",
+	      	"vehicle_price": 500000,
+	      	"vehicle_model": "S500",
+	      	"vehicle_emission": "#93-2",
+	      	"status": "Yes"
+	    },
+	    {
+			"id": "3",
+	      	"vehicle_name": "Vehicle 03",
+	      	"vehicle_desc": "Description of Vehicle 03",
+	      	"vehicle_brand": "S900",
+	      	"vehicle_price": 900000,
+	      	"vehicle_model": "S900",
+	      	"vehicle_emission": "#93-3",
+	      	"status": "Yes"
+	    }
+	], 
+	"aoColumns": [
+		{
+			"sTitle": "ID",
+			"mData": "id"
+  		},
+		{
+			"sTitle": "Vehicle Name",
+			"mData": "vehicle_name"
+		},
+		{
+			"sTitle": "Vehicle Description",
+			"mData": "vehicle_desc"
+		},
+		{
+		    "sTitle": "Vehicle Brand",
+			"mData": "vehicle_brand"
+		},
+		{
+		    "sTitle": "Vehicle Price",
+			"mData": "vehicle_price"
+		},
+		{
+		    "sTitle": "Vehicle Model",
+			"mData": "vehicle_model"
+		},
+		{
+		    "sTitle": "Vehicle Emission",
+			"mData": "vehicle_emission"
+		},
+		{
+		    "sTitle": "Status",
+			"mData": "status"
+		}		
+	]
+}

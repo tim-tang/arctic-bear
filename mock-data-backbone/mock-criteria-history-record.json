@@ -1,40 +1,38 @@
 {
-  "aaData": [
-    {
-      "action": "Create Criteria 1",
-      "user_name": "Administrator",
-      "date_time": "2014-03-20 12:00:30",
-      "details": "Administrator do something"
-    },
-    {
-      "action": "Read Criteria 2",
-	  "user_name": "Administrator",
-      "date_time": "2014-03-20 12:00:30",
-      "details": "Administrator do something"
-    },
-    {
-      "action": "Delete Criteria 3",
-      "user_name": "Administrator",
-      "date_time": "2014-03-20 12:00:30",
-      "details": "Administrator do something"
-    }
-  ],
-  "aoColumns": [
-    {
-      "sTitle": "Action",
-      "mData": "action"
-    },
-    {
-      "sTitle": "User Name",
-      "mData": "user_name"
-    },
-    {
-      "sTitle": "Date Time",
-      "mData": "date_time"
-    },
-    {
-      "sTitle": "Details",
-      "mData": "details"
-    }
-  ]
+	"id": "1",
+	"history": {
+		"aaData": [
+			{
+				"action": "Create Criteria 1",
+				"user_name": "Administrator",
+				"date_time": "2014-03-20 12:00:30",
+				"details": "Administrator do something"
+			}, {
+				"action": "Read Criteria 2",
+				"user_name": "Administrator",
+				"date_time": "2014-03-20 12:00:30",
+				"details": "Administrator do something"
+			}, {
+				"action": "Delete Criteria 3",
+				"user_name": "Administrator",
+				"date_time": "2014-03-20 12:00:30",
+				"details": "Administrator do something"
+			}
+		],
+		"aoColumns": [
+			{
+				"sTitle": "Action",
+				"mData": "action"
+			}, {
+				"sTitle": "User Name",
+				"mData": "user_name"
+			}, {
+				"sTitle": "Date Time",
+				"mData": "date_time"
+			}, {
+				"sTitle": "Details",
+				"mData": "details"
+			}
+		]
+	}
 }

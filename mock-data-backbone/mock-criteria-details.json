@@ -1,0 +1,8 @@
+{
+	"id": "1",
+	"cri_name": "All Users",
+	"cri_desc": "This is All Users",
+	"obj_type": "User",
+	"enabled": "Yes"
+}
+

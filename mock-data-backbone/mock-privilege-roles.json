@@ -1,0 +1,33 @@
+{
+	"id": "1",
+	"roles": {
+		"aaData": [
+			{
+				"id": "1",
+				"role_name": "Administrator",
+				"role_desc": "This is Administrator",
+				"enabled": "Yes"
+			}, {
+				"id": "2",
+				"role_name": "Manager",
+				"role_desc": "This is Manager",
+				"enabled": "No"
+			}
+		],
+		"aoColumns": [
+			{
+				"sTitle": "ID",
+				"mData": "id"
+			}, {
+				"sTitle": "Role Name",
+				"mData": "role_name"
+			}, {
+				"sTitle": "Description",
+				"mData": "role_desc"
+			}, {
+				"sTitle": "Enabled",
+				"mData": "enabled"
+			}
+		]
+	}
+}

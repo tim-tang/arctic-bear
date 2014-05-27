@@ -1,0 +1,50 @@
+{
+	"id": "1",
+	"privileges": {
+		"aaData": [
+			{
+				"id": "3",
+				"priv_name": "Create User",
+				"priv_desc": "This is Create User",
+				"priv_type": "Create",
+				"enabled": "Yes"
+			}, {
+				"id": "1",
+				"priv_name": "Read User",
+				"priv_desc": "This is Read User",
+				"priv_type": "Read",
+				"enabled": "Yes"
+			}, {
+				"id": "5",
+				"priv_name": "Modify User",
+				"priv_desc": "This is Modify User",
+				"priv_type": "Modify",
+				"enabled": "No"
+			}, {
+				"id": "7",
+				"priv_name": "Delete User",
+				"priv_desc": "This is Delete User",
+				"priv_type": "Delete",
+				"enabled": "Yes"
+			}
+		],
+		"aoColumns": [
+			{
+				"sTitle": "ID",
+				"mData": "id"
+			}, {
+				"sTitle": "Privilege Name",
+				"mData": "priv_name"
+			}, {
+				"sTitle": "Description",
+				"mData": "priv_desc"
+			}, {
+				"sTitle": "Privilege Type",
+				"mData": "priv_type"
+			}, {
+				"sTitle": "Enabled",
+				"mData": "enabled"
+			}
+		]
+	}
+}

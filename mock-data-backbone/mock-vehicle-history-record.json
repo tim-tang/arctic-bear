@@ -3,17 +3,17 @@
 	"history": {
 		"aaData": [
 			{
-				"action": "Create Privilege 1",
+				"action": "Create Vehicle 01",
 				"user_name": "Administrator",
 				"date_time": "2014-03-20 12:00:30",
 				"details": "Administrator do something"
 			}, {
-				"action": "Read Privilege 2",
+				"action": "Update Vehicle 01",
 				"user_name": "Administrator",
 				"date_time": "2014-03-20 12:00:30",
 				"details": "Administrator do something"
 			}, {
-				"action": "Delete Privilege 3",
+				"action": "Delete Vehicle 05",
 				"user_name": "Administrator",
 				"date_time": "2014-03-20 12:00:30",
 				"details": "Administrator do something"

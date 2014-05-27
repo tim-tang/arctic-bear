@@ -168,6 +168,18 @@ def fetch_vehicle_criteriable_attrs():
     mock_vehicle_criteriable_attrs = retrieve_mock_data('mock-vehicle-header.json', 'mock-data-backbone')
     print mock_vehicle_criteriable_attrs
     return json.dumps(mock_vehicle_criteriable_attrs)
+
+@bp.route('/vehicle-history/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_vehicle_history(id):
+    mock_vehicle_hisroty = retrieve_mock_data('mock-vehicle-history-record.json', 'mock-data-backbone')
+    return json.dumps(mock_vehicle_hisroty)
+
+@bp.route('/vehicle-general-info/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_vehicle_general_info(id):
+    mock_vehicle_general_info = retrieve_mock_data('mock-vehicle-details.json', 'mock-data-backbone')
+    return json.dumps(mock_vehicle_general_info);
 ##################### Vehicle Mock Data #######################
 
 ####################### User Mock Data ########################
@@ -354,11 +366,23 @@ def update_privilege(id):
     print 'In PUT METHOD..'
     return jsonify(id=id);
 
-@bp.route('/privilege-history', methods=['GET', 'OPTIONS'])
+@bp.route('/privilege-history/<int:id>', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
-def fetch_privilege_history():
+def fetch_privilege_history(id):
     mock_privilege_hisroty = retrieve_mock_data('mock-privilege-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_privilege_hisroty);
+
+@bp.route('/privilege-general-info/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_privilege_general_info(id):
+    mock_privilege_general_info = retrieve_mock_data('mock-privilege-details.json', 'mock-data-backbone')
+    return json.dumps(mock_privilege_general_info);
+
+@bp.route('/privilege-roles/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_privilege_roles(id):
+    mock_privilege_roles = retrieve_mock_data('mock-privilege-roles.json', 'mock-data-backbone')
+    return json.dumps(mock_privilege_roles);
 ##################### Privilege Mock Data #####################
 
 ##################### Criteria Mock Data ######################
@@ -385,11 +409,23 @@ def update_criteria(id):
     print 'In PUT METHOD..'
     return jsonify(id=id)
 
-@bp.route('/criteria-history', methods=['GET', 'OPTIONS'])
+@bp.route('/criteria-history/<int:id>', methods=['GET', 'OPTIONS'])
 @crossdomain(origin='*', headers='Content-Type, Authorization')
-def fetch_criteria_history():
+def fetch_criteria_history(id):
     mock_criteria_hisroty = retrieve_mock_data('mock-criteria-history-record.json', 'mock-data-backbone')
     return json.dumps(mock_criteria_hisroty)
+
+@bp.route('/criteria-general-info/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_criteria_general_info(id):
+    mock_criteria_general_info = retrieve_mock_data('mock-criteria-details.json', 'mock-data-backbone')
+    return json.dumps(mock_criteria_general_info);
+
+@bp.route('/criteria-privileges/<int:id>', methods=['GET', 'OPTIONS'])
+@crossdomain(origin='*', headers='Content-Type, Authorization')
+def fetch_criteria_privileges(id):
+    mock_criteria_privileges = retrieve_mock_data('mock-criteria-privileges.json', 'mock-data-backbone')
+    return json.dumps(mock_criteria_privileges);
 ##################### Criteria Mock Data ######################
 
 ################# Generic Filter  Mock Data ###################
