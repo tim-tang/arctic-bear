@@ -2,7 +2,6 @@
     "aaData": [
 	    {
 			"id": "1",
-	      	"vehicle_name": "Vehicle 01",
 	      	"vehicle_desc": "Description of Vehicle 01",
 	      	"vehicle_brand": "S200",
 	      	"vehicle_price": 200000,
@@ -12,7 +11,6 @@
 	    },
 	    {
 			"id": "2",
-	      	"vehicle_name": "Vehicle 02",
 	      	"vehicle_desc": "Description of Vehicle 02",
 	      	"vehicle_brand": "S500",
 	      	"vehicle_price": 500000,
@@ -22,7 +20,6 @@
 	    },
 	    {
 			"id": "3",
-	      	"vehicle_name": "Vehicle 03",
 	      	"vehicle_desc": "Description of Vehicle 03",
 	      	"vehicle_brand": "S900",
 	      	"vehicle_price": 900000,
@@ -36,10 +33,6 @@
 			"sTitle": "ID",
 			"mData": "id"
   		},
-		{
-			"sTitle": "Vehicle Name",
-			"mData": "vehicle_name"
-		},
 		{
 			"sTitle": "Vehicle Description",
 			"mData": "vehicle_desc"
