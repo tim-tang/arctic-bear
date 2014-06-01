@@ -24,8 +24,8 @@ def create_app(config=None):
     app.static_folder = app.config.get('STATIC_FOLDER')
     app.config.update({'SITE_TIME': datetime.datetime.utcnow()})
 
-    register_jinja(app)
-    register_babel(app)
+    #register_jinja(app)
+    #register_babel(app)
     register_routers(app)
     register_log(app)
     return app

@@ -11,119 +11,13 @@ __all__ = ['bp']
 
 bp = Blueprint('demo_handler', __name__)
 
-@bp.route('/', methods=['GET'])
-def login():
-    return render_template('security/login-user.html')
-
-@bp.route('/forgot-password')
-def forgot_password():
-    return render_template('security/forgot-password.html')
-
-@bp.route('/reset-password')
-def reset_password():
-    return render_template('security/reset-password.html')
-
-@bp.route('/dashboard')
-def dashboard():
-    return render_template('dashboard/dashboard-container.html')
-
-@bp.route('/product-search')
-def product_search():
-    return render_template('product/product-search.html')
-
-@bp.route('/user-mgmt')
-def user_mgmt():
-    return render_template('user/user-container.html')
-
-@bp.route('/user-group-mgmt')
-def user_group_mgmt():
-    return render_template('user-group/user-group-container.html')
-
-@bp.route('/role-mgmt')
-def role_mgmt():
-    return render_template('role/role-container.html')
-
-@bp.route('/privilege-mgmt')
-def privilege_mgmt():
-    return render_template('privilege/privilege-container.html')
-
-@bp.route('/criteria-mgmt')
-def criteria_mgmt():
-    return render_template('criteria/criteria-container.html')
-
-@bp.route('/role-details')
-def role_details():
-    return render_template('role/role-details.html')
-
-@bp.route('/privilege-details')
-def privilege_details():
-    return render_template('privilege/privilege-details.html')
-
-@bp.route('/criteria-details')
-def criteria_details():
-    return render_template('criteria/criteria-details.html')
-
-@bp.route('/vehicle-mgmt')
-def vehicle_mgmt():
-    response = render_template('vehicle/vehicle-container.html')
-    return response
-
-@bp.app_errorhandler(404)
-def not_found(error):
-    return render_template('security/404.html'), 404
-
-@bp.app_errorhandler(500)
-def internal_error(error):
-    return render_template('security/500.html'), 500
-
-
-###############################################################
-#
-# Mock Data Requests Handling
-#
-###############################################################
-@bp.route('/user-mgmt-data')
-def user_mgmt_data():
-    return jsonify(retrieve_mock_data('mock-user-mgmt.json'))
-
-@bp.route('/userGroup-mgmt-data')
-def userGroup_mgmt_data():
-    return jsonify(retrieve_mock_data('mock-userGroup-mgmt.json'))
-
-@bp.route('/vehicle-mgmt-data')
-def vehicle_mgmt_data():
-    return jsonify(retrieve_mock_data('mock-vehicle-mgmt.json'))
-
-@bp.route('/role-mgmt-data')
-def role_mgmt_data():
-    return jsonify(retrieve_mock_data('mock-role-mgmt.json'))
-
-@bp.route('/privilege-mgmt-data')
-def privilege_mgmt_data():
-    return jsonify(retrieve_mock_data('mock-privilege-mgmt.json'))
-
-@bp.route('/criteria-mgmt-data')
-def criteria_mgmt_data():
-    return jsonify(retrieve_mock_data('mock-criteria-mgmt.json'))
-
-@bp.route('/role-history-data')
-def role_history_data():
-    return jsonify(retrieve_mock_data('mock-role-history.json'))
-
-@bp.route('/privilege-history-data')
-def privilege_history_data():
-    return jsonify(retrieve_mock_data('mock-privilege-history.json'))
-
-@bp.route('/criteria-history-data')
-def criteria_history_data():
-    return jsonify(retrieve_mock_data('mock-criteria-history.json'))
-
 
 ###############################################################
 #
 # Mock Data With BACKBONE.JS
 #
 ###############################################################
+
 
 ##################### Security Mock Start #####################
 @bp.route('/security/authenticate', methods=['POST', 'OPTIONS'])
@@ -456,6 +350,3 @@ def retrieve_mock_data(file_name, folder='mock-data'):
     with open(os.path.join(DEMO_DATA_FOLDER, file_name)) as mock_json: 
         mock_data = json.load(mock_json)
         return mock_data
-
-
-
